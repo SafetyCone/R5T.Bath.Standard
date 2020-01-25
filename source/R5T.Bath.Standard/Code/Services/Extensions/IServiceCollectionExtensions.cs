@@ -9,6 +9,9 @@ namespace R5T.Bath.Standard
 {
     public static class IServiceCollectionExtensions
     {
+        /// <summary>
+        /// Adds a file-based <see cref="IHumanOutput"/> service.
+        /// </summary>
         public static IServiceCollection AddHumanOutput(this IServiceCollection services)
         {
             services.AddFileHumanOutput();
