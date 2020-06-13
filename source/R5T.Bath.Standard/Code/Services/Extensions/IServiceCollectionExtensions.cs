@@ -23,9 +23,9 @@ namespace R5T.Bath.Standard
         /// <summary>
         /// Adds a file-based <see cref="IHumanOutput"/> service.
         /// </summary>
-        public static ServiceAction<IHumanOutput> AddHumanOutputAction(this IServiceCollection services)
+        public static IServiceAction<IHumanOutput> AddHumanOutputAction(this IServiceCollection services)
         {
-            var serviceAction = new ServiceAction<IHumanOutput>(() => services.AddHumanOutput());
+            var serviceAction = ServiceAction<IHumanOutput>.New(() => services.AddHumanOutput());
             return serviceAction;
         }
     }
